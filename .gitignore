@@ -1,0 +1,21 @@
+# System cruft
+*.py[cod]
+.DS_Store
+*~
+\#*#
+*.swp
+
+# Generated files
+node_modules
+.ipynb_checkpoints
+pycharm-debug.egg
+.idea
+
+# Data files
+
+# Auxiliary files
+/src/.coverage
+/src/.idea
+/src/.project
+/src/.pydevproject
+
