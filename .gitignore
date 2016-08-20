@@ -1,8 +1,10 @@
-# System cruft
-*.py[cod]
+# Byte-compiled / optimized / DLL files
 .DS_Store
-*~
-\#*#
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
 *.swp
 
 # Generated files
@@ -11,11 +13,44 @@ node_modules
 pycharm-debug.egg
 .idea
 
-# Data files
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Auxiliary files
-/src/.coverage
-/src/.idea
-/src/.project
-/src/.pydevproject
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
 
