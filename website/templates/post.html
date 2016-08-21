@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load markdown_deux_tags %}
 
 {% block blog_entries %}
   <div class="post">
@@ -8,7 +9,9 @@
       Tagged under {{  object.tags.all|join:", " }}
     </p>
     <p class="meta">
+    {% markdown %}
     {{ object.body }}
+    {% endmarkdown %}
     </p>
   </div>
 {% endblock %}
