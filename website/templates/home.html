@@ -1,15 +1,17 @@
 {% extends "base.html" %}
+{% load markdown_deux_tags %}
 
 {% block blog_entries  %}
 {% for object in object_list %}
     <div class="post">
         <h2><a href="{% url "entry_detail" slug=object.slug %}">{{ object.title }}</a></h2>
         <p class="meta">
-            {{ object.created }} | 
-            Tagged under {{ object.tags.all|join:", " }}
+        {{ object.created }} | 
+        Tagged under {{ object.tags.all|join:", " }}
         </p>
-        <!--p class="meta">{{ object.body }}</p-->
-        {{ object.body }}
+        {% markdown %}
+            {{ object.body }}
+        {% endmarkdown %}
     </div>
-    {% endfor %}
+{% endfor %}
 {% endblock %}

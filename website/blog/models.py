@@ -1,4 +1,5 @@
 from django.db import models
+from markdownx.models import MarkdownxField
 from django.core.urlresolvers import reverse
 
 
@@ -16,7 +17,7 @@ class EntryQuerySet(models.QuerySet):
 
 class Entry(models.Model):
     title = models.CharField(max_length=200)
-    body = models.TextField()
+    body = MarkdownxField()
     slug = models.SlugField(max_length=200, unique=True)
     publish = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
